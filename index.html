@@ -10,7 +10,15 @@
 
 
 		<script>
-			
+			let btn = document.getElementById("btn");
+let counter = document.getElementById("counter");
+let saldo = 0;
+btn.addEventListener("click", function(e){
+e.preventDefault();
+e.stopPropagation();
+saldo += (149 + (saldo * 1.21)) / 0.95;
+counter.textContent = "Saldo: " + Math.floor(saldo) + "kr";
+});
 		</script>
 	</body>
 </html>
